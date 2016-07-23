@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3838905E1C6A19DF00CFFBEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3838905D1C6A19DF00CFFBEB /* main.m */; };
+		383890611C6A19DF00CFFBEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 383890601C6A19DF00CFFBEB /* AppDelegate.m */; };
+		383890641C6A19DF00CFFBEB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383890631C6A19DF00CFFBEB /* ViewController.m */; };
+		383890671C6A19DF00CFFBEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383890651C6A19DF00CFFBEB /* Main.storyboard */; };
+		383890691C6A19DF00CFFBEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383890681C6A19DF00CFFBEB /* Assets.xcassets */; };
+		3838906C1C6A19DF00CFFBEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3838906A1C6A19DF00CFFBEB /* LaunchScreen.storyboard */; };
+		383890771C6A19DF00CFFBEB /* babylifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383890761C6A19DF00CFFBEB /* babylifeTests.m */; };
+		383890821C6A19DF00CFFBEB /* babylifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383890811C6A19DF00CFFBEB /* babylifeUITests.m */; };
+		383890901C6A25E200CFFBEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3838908F1C6A25E200CFFBEB /* InfoPlist.strings */; };
+		383890941C6AE49E00CFFBEB /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 383890931C6AE49E00CFFBEB /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		383890981C6AE85000CFFBEB /* WebProc.m in Sources */ = {isa = PBXBuildFile; fileRef = 383890971C6AE85000CFFBEB /* WebProc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		383890731C6A19DF00CFFBEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383890511C6A19DE00CFFBEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383890581C6A19DE00CFFBEB;
+			remoteInfo = babylife;
+		};
+		3838907E1C6A19DF00CFFBEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383890511C6A19DE00CFFBEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383890581C6A19DE00CFFBEB;
+			remoteInfo = babylife;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		383890591C6A19DE00CFFBEB /* babylife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babylife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3838905D1C6A19DF00CFFBEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3838905F1C6A19DF00CFFBEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		383890601C6A19DF00CFFBEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		383890621C6A19DF00CFFBEB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		383890631C6A19DF00CFFBEB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		383890661C6A19DF00CFFBEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		383890681C6A19DF00CFFBEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3838906B1C6A19DF00CFFBEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3838906D1C6A19DF00CFFBEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383890721C6A19DF00CFFBEB /* babylifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = babylifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		383890761C6A19DF00CFFBEB /* babylifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = babylifeTests.m; sourceTree = "<group>"; };
+		383890781C6A19DF00CFFBEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3838907D1C6A19DF00CFFBEB /* babylifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = babylifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		383890811C6A19DF00CFFBEB /* babylifeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = babylifeUITests.m; sourceTree = "<group>"; };
+		383890831C6A19DF00CFFBEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3838908F1C6A25E200CFFBEB /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = ../InfoPlist.strings; sourceTree = "<group>"; };
+		383890921C6AE49E00CFFBEB /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		383890931C6AE49E00CFFBEB /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		383890961C6AE85000CFFBEB /* WebProc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebProc.h; sourceTree = "<group>"; };
+		383890971C6AE85000CFFBEB /* WebProc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebProc.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		383890561C6A19DE00CFFBEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3838906F1C6A19DF00CFFBEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3838907A1C6A19DF00CFFBEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		383890501C6A19DE00CFFBEB = {
+			isa = PBXGroup;
+			children = (
+				383890951C6AE85000CFFBEB /* WebProc */,
+				383890911C6AE49E00CFFBEB /* JsonKit */,
+				3838905B1C6A19DE00CFFBEB /* babylife */,
+				383890751C6A19DF00CFFBEB /* babylifeTests */,
+				383890801C6A19DF00CFFBEB /* babylifeUITests */,
+				3838905A1C6A19DE00CFFBEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3838905A1C6A19DE00CFFBEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				383890591C6A19DE00CFFBEB /* babylife.app */,
+				383890721C6A19DF00CFFBEB /* babylifeTests.xctest */,
+				3838907D1C6A19DF00CFFBEB /* babylifeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3838905B1C6A19DE00CFFBEB /* babylife */ = {
+			isa = PBXGroup;
+			children = (
+				3838905F1C6A19DF00CFFBEB /* AppDelegate.h */,
+				383890601C6A19DF00CFFBEB /* AppDelegate.m */,
+				383890621C6A19DF00CFFBEB /* ViewController.h */,
+				383890631C6A19DF00CFFBEB /* ViewController.m */,
+				383890651C6A19DF00CFFBEB /* Main.storyboard */,
+				383890681C6A19DF00CFFBEB /* Assets.xcassets */,
+				3838906A1C6A19DF00CFFBEB /* LaunchScreen.storyboard */,
+				3838906D1C6A19DF00CFFBEB /* Info.plist */,
+				3838905C1C6A19DE00CFFBEB /* Supporting Files */,
+			);
+			path = babylife;
+			sourceTree = "<group>";
+		};
+		3838905C1C6A19DE00CFFBEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3838908F1C6A25E200CFFBEB /* InfoPlist.strings */,
+				3838905D1C6A19DF00CFFBEB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		383890751C6A19DF00CFFBEB /* babylifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				383890761C6A19DF00CFFBEB /* babylifeTests.m */,
+				383890781C6A19DF00CFFBEB /* Info.plist */,
+			);
+			path = babylifeTests;
+			sourceTree = "<group>";
+		};
+		383890801C6A19DF00CFFBEB /* babylifeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				383890811C6A19DF00CFFBEB /* babylifeUITests.m */,
+				383890831C6A19DF00CFFBEB /* Info.plist */,
+			);
+			path = babylifeUITests;
+			sourceTree = "<group>";
+		};
+		383890911C6AE49E00CFFBEB /* JsonKit */ = {
+			isa = PBXGroup;
+			children = (
+				383890921C6AE49E00CFFBEB /* JSONKit.h */,
+				383890931C6AE49E00CFFBEB /* JSONKit.m */,
+			);
+			path = JsonKit;
+			sourceTree = "<group>";
+		};
+		383890951C6AE85000CFFBEB /* WebProc */ = {
+			isa = PBXGroup;
+			children = (
+				383890961C6AE85000CFFBEB /* WebProc.h */,
+				383890971C6AE85000CFFBEB /* WebProc.m */,
+			);
+			path = WebProc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		383890581C6A19DE00CFFBEB /* babylife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 383890861C6A19DF00CFFBEB /* Build configuration list for PBXNativeTarget "babylife" */;
+			buildPhases = (
+				383890551C6A19DE00CFFBEB /* Sources */,
+				383890561C6A19DE00CFFBEB /* Frameworks */,
+				383890571C6A19DE00CFFBEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = babylife;
+			productName = babylife;
+			productReference = 383890591C6A19DE00CFFBEB /* babylife.app */;
+			productType = "com.apple.product-type.application";
+		};
+		383890711C6A19DF00CFFBEB /* babylifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 383890891C6A19DF00CFFBEB /* Build configuration list for PBXNativeTarget "babylifeTests" */;
+			buildPhases = (
+				3838906E1C6A19DF00CFFBEB /* Sources */,
+				3838906F1C6A19DF00CFFBEB /* Frameworks */,
+				383890701C6A19DF00CFFBEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				383890741C6A19DF00CFFBEB /* PBXTargetDependency */,
+			);
+			name = babylifeTests;
+			productName = babylifeTests;
+			productReference = 383890721C6A19DF00CFFBEB /* babylifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3838907C1C6A19DF00CFFBEB /* babylifeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3838908C1C6A19DF00CFFBEB /* Build configuration list for PBXNativeTarget "babylifeUITests" */;
+			buildPhases = (
+				383890791C6A19DF00CFFBEB /* Sources */,
+				3838907A1C6A19DF00CFFBEB /* Frameworks */,
+				3838907B1C6A19DF00CFFBEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3838907F1C6A19DF00CFFBEB /* PBXTargetDependency */,
+			);
+			name = babylifeUITests;
+			productName = babylifeUITests;
+			productReference = 3838907D1C6A19DF00CFFBEB /* babylifeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		383890511C6A19DE00CFFBEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Han.zhihong;
+				TargetAttributes = {
+					383890581C6A19DE00CFFBEB = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 82U6XT557T;
+					};
+					383890711C6A19DF00CFFBEB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 383890581C6A19DE00CFFBEB;
+					};
+					3838907C1C6A19DF00CFFBEB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 383890581C6A19DE00CFFBEB;
+					};
+				};
+			};
+			buildConfigurationList = 383890541C6A19DE00CFFBEB /* Build configuration list for PBXProject "babylife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 383890501C6A19DE00CFFBEB;
+			productRefGroup = 3838905A1C6A19DE00CFFBEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				383890581C6A19DE00CFFBEB /* babylife */,
+				383890711C6A19DF00CFFBEB /* babylifeTests */,
+				3838907C1C6A19DF00CFFBEB /* babylifeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		383890571C6A19DE00CFFBEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3838906C1C6A19DF00CFFBEB /* LaunchScreen.storyboard in Resources */,
+				383890901C6A25E200CFFBEB /* InfoPlist.strings in Resources */,
+				383890691C6A19DF00CFFBEB /* Assets.xcassets in Resources */,
+				383890671C6A19DF00CFFBEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383890701C6A19DF00CFFBEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3838907B1C6A19DF00CFFBEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		383890551C6A19DE00CFFBEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383890641C6A19DF00CFFBEB /* ViewController.m in Sources */,
+				383890611C6A19DF00CFFBEB /* AppDelegate.m in Sources */,
+				383890941C6AE49E00CFFBEB /* JSONKit.m in Sources */,
+				3838905E1C6A19DF00CFFBEB /* main.m in Sources */,
+				383890981C6AE85000CFFBEB /* WebProc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3838906E1C6A19DF00CFFBEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383890771C6A19DF00CFFBEB /* babylifeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383890791C6A19DF00CFFBEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383890821C6A19DF00CFFBEB /* babylifeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		383890741C6A19DF00CFFBEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383890581C6A19DE00CFFBEB /* babylife */;
+			targetProxy = 383890731C6A19DF00CFFBEB /* PBXContainerItemProxy */;
+		};
+		3838907F1C6A19DF00CFFBEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383890581C6A19DE00CFFBEB /* babylife */;
+			targetProxy = 3838907E1C6A19DF00CFFBEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		383890651C6A19DF00CFFBEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383890661C6A19DF00CFFBEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3838906A1C6A19DF00CFFBEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3838906B1C6A19DF00CFFBEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		383890841C6A19DF00CFFBEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		383890851C6A19DF00CFFBEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		383890871C6A19DF00CFFBEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = babylife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.zh.babylife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		383890881C6A19DF00CFFBEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = babylife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.zh.babylife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3838908A1C6A19DF00CFFBEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = babylifeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.zh.babylifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/babylife.app/babylife";
+			};
+			name = Debug;
+		};
+		3838908B1C6A19DF00CFFBEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = babylifeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.zh.babylifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/babylife.app/babylife";
+			};
+			name = Release;
+		};
+		3838908D1C6A19DF00CFFBEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = babylifeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.zh.babylifeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = babylife;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3838908E1C6A19DF00CFFBEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = babylifeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.zh.babylifeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = babylife;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		383890541C6A19DE00CFFBEB /* Build configuration list for PBXProject "babylife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383890841C6A19DF00CFFBEB /* Debug */,
+				383890851C6A19DF00CFFBEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		383890861C6A19DF00CFFBEB /* Build configuration list for PBXNativeTarget "babylife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383890871C6A19DF00CFFBEB /* Debug */,
+				383890881C6A19DF00CFFBEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		383890891C6A19DF00CFFBEB /* Build configuration list for PBXNativeTarget "babylifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838908A1C6A19DF00CFFBEB /* Debug */,
+				3838908B1C6A19DF00CFFBEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3838908C1C6A19DF00CFFBEB /* Build configuration list for PBXNativeTarget "babylifeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838908D1C6A19DF00CFFBEB /* Debug */,
+				3838908E1C6A19DF00CFFBEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 383890511C6A19DE00CFFBEB /* Project object */;
+}
