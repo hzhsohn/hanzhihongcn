@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once("./_module/session.m.php");
 //判断登录的SESSION
 $userinfo=json_decode($_SESSION['ADMIN_INFO']);
@@ -28,9 +28,12 @@ else
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>韩智鸿的文档</title><style type="text/css">
 <!--
+
 .text1 {
 	font-family: "Arial Black", Gadget, sans-serif;
 	font-size: 36px;

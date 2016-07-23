@@ -8,6 +8,8 @@ $wsadr='127.0.0.1';
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Author" content="Han.zhihong." />
 <meta name="Category" content="developer,apple,andrpoid,products" />
@@ -70,7 +72,6 @@ var searchUrlImg1='url('+searchImg[1].src+')';
   </div>
   <div id="divMid">
     <div id="divLeftBar"><img src="image/weixin_qr.jpg" width="210" height="210" />
-      <iframe name="alimamaifrm" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" width="210" height="200" src="http://www.taobao.com/go/app/tbk_app/chongzhi_210_200.php?pid=mm_13220444_2755825_9777591&page=chongzhi_210_200.php&size_w=210&size_h=200&stru_phone=1&stru_game=1&stru_travel=1" ></iframe>
       <form id="frmChat">
         <p id="statusBar" class="chat_fail"><span id="status"><img src="image/index/chat_coct.gif"/> 正在连接到聊天室...</span><span style="float:right;" id="connected"></span></p>
         <ul id="log">
@@ -106,11 +107,10 @@ var searchUrlImg1='url('+searchImg[1].src+')';
       </object>
     </div>
     <div id="divRightBar" >
-     	    <h3><a href="../my">进入 &gt;&gt; 我的笔记</a></h3>
-            <div class="raised"> <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
-            <h4>我的宣言</h4>
+     	      <div class="raised"> <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+            <h4>-.-</h4>
             <div class="boxcontent">
-                  加油加油...加加油...
+                <a href="../my">进入 &gt;&gt; 我的笔记</a>
             </div>
             <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b> </div>
     </div>

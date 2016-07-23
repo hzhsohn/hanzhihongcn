@@ -20,7 +20,7 @@ function zhPhpSessionSet($name,$value)
 }
 
 //SESSION内容
-function zhPhpSessionGet($name)
+function zhPhpSessionVal($name)
 {
 	return $_SESSION[$name];
 }

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="http://html5demos.com/css/html5demos.css" type="text/css" /> 
 <style> 
 #chat { width: 97%; }
+#jsonstr { width: 97%; }
 .them { font-weight: bold; }
 .them:before { content: 'feedback: '; color:#036; font-size: 14px; }
 #log {
@@ -35,9 +36,12 @@ note:the websocket send/recv buf must be escape() and unescape() transmission.
 <article> 
     <input type="text" id="ipstr" value="127.0.0.1" size="16" placeholder="type ip" /> 
     <input type="text" id="portstr" value="7778" size="6" placeholder="type port" /> 
-<input type="button" id="btnconnect" value="连接" /> 
+<input type="button" id="btnconnect" value="连接" /> <br>
+    <strong>发送16进制</strong><br>
     <input type="text" id="chat" value="0x63 0x00 0x04 0x00 0x6F 0x63 0x00 0x00 0xD2 0x6B" size="50" placeholder="type and press enter to chat" /> 
-  <p id="status">Not connected</p> 
+    <strong>发送ASCII字符串 </strong>
+    <input type="text" id="jsonstr" value="{abc}" size="50" placeholder="type and press enter to json" />
+    <p id="status">Not connected</p> 
   <ul id="log"></ul> 
 </article> 
 <script>
@@ -92,7 +96,8 @@ function openConnection() {
 var log = document.getElementById('log'),
     chat = document.getElementById('chat'),
     conn = {},
-    state = document.getElementById('status');
+    state = document.getElementById('status'),
+	jsonstr = document.getElementById('jsonstr');
  
 if (window.WebSocket === undefined) {
   state.innerHTML = 'Sockets not supported';
@@ -104,6 +109,13 @@ chat.onkeyup=function(event) {
 	if (event.keyCode==13&&conn.readyState === 1) {
 	  conn.send(trHexStrToSend(chat.value.trim()));
 	  //chat.value = '';
+	}
+};
+
+jsonstr.onkeyup=function(event) {
+	// if we're connected
+	if (event.keyCode==13&&conn.readyState === 1) {
+	  conn.send(jsonstr.value.trim());
 	}
 };
 

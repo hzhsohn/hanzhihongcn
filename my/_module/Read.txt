@@ -44,9 +44,8 @@ E-MAIL: mail@hanzhihong.cn
 		PzhAes::encrypt($txt,$key) 			//加密		return str
 		PzhAes::decrypt($txt,$key) 			//解密		return str
 
-		zhPhpSessionSet($name,$value)			//创建SESSION	
-		zhPhpSessionGet($name)			//注销当前用户的所有SESSION,并且结束session会话
-		zhPhpSessionExist($name)   判断是否SESSION存在
+		zhPhpSessionCreate($name)			//创建SESSION	
+		zhPhpSessionDestroy()			//注销当前用户的所有SESSION,并且结束session会话
 		zhPhpSessionRemove($name) //注销一个对象
 		
 		zhPhpChecksumCreate() //验证码图片生成
