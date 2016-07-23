@@ -31,7 +31,6 @@ else
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>韩智鸿的文档</title><style type="text/css">
 <!--
-
 .text1 {
 	font-family: "Arial Black", Gadget, sans-serif;
 	font-size: 36px;
