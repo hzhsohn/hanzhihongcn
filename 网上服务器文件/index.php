@@ -25,7 +25,16 @@ $db->close();
 <body>
 <?php
 $host = 'http://'.$ipv.':81';
-$loc = 'Location:'.$host.'/pc?wsadr='.$ipv;
+$loc='';
+
+if(''==$_SERVER['QUERY_STRING'])
+{
+  $loc = 'Location:'.$host.'/pc?wsadr='.$ipv;
+}
+else
+{
+  $loc = 'Location:'.$host.'/'.$_SERVER['QUERY_STRING'];
+}
 header($loc);
 exit;
 ?>
