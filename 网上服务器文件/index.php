@@ -29,7 +29,7 @@ $loc='';
 
 if(''==$_SERVER['QUERY_STRING'])
 {
-  $loc = 'Location:'.$host.'/pc?wsadr='.$ipv;
+  $loc = 'Location:'.$host.'/pc';
 }
 else
 {

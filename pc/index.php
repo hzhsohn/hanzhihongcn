@@ -1,9 +1,6 @@
 ﻿<?php
-$wsadr=$_REQUEST['wsadr'];
-if($wsadr=='')
-{
-$wsadr='127.0.0.1';
-}
+$wsadr=$_SERVER['SERVER_NAME'];
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -119,6 +116,7 @@ var searchUrlImg1='url('+searchImg[1].src+')';
     <div id="divCopyright">Copyright@2012  , Design By Han.zh , 粤ICP备13015372号</div>
   </div>
 </div>
+
 <script>
 //写cookies 
 function setCookie(name,value) 
