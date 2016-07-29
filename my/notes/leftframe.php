@@ -110,8 +110,6 @@ a:active {
 <body>
 <p><a href="../" target="_parent" >返回面板</a></p>
 <hr />
-<p><a href="work" target="rightframe">项目管理</a></p>
-<hr />
 <p><a href="type.php" target="rightframe">记事分类</a></p>
 <p><a href="add_article.php" target="rightframe">添加笔记</a></p>
 <hr />
