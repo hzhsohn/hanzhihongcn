@@ -1,5 +1,5 @@
 ﻿<?php
-require_once("config.php");
+require_once("../_config.php");
 require_once("../_module/mysql.m.php");
 require_once('../_module/encode.m.php');
 require_once("ueedit_encode.php");
@@ -20,6 +20,12 @@ if(0==strcmp($method,'update'))
 	$twotype=$_REQUEST['twotype'];
 	if(0==strcmp($twotype,''))
 	{$twotype=0;}
+	
+	 if(''==$conent)
+   {
+     echo 'content is null';
+     exit;
+   }
 
 	$conent=ueTrSql($conent);//将字符串进行处理
 	if(get_magic_quotes_gpc())//如果get_magic_quotes_gpc()是打开的

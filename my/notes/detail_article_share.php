@@ -1,5 +1,5 @@
 <?php
-require_once("config.php");
+require_once("../_config.php");
 require_once("../_module/mysql.m.php");
 require_once("../_module/session.m.php");
 require_once("ueedit_encode.php");
