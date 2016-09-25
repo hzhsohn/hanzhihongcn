@@ -30,14 +30,14 @@
 <section id="wrapper"> <a href="../index.php">返回档案</a>
 <header> 
     <h1>WebSocket -&gt; Serial</h1> 
-note:the websocket send/recv buf must be escape() and unescape() transmission.
+note:the websocket send/recv 16hex buf must be escape() and unescape() transmission.
     </header> 
 
 <article> 
     <input type="text" id="ipstr" value="127.0.0.1" size="16" placeholder="type ip" /> 
-    <input type="text" id="portstr" value="7778" size="6" placeholder="type port" /> 
+    <input type="text" id="portstr" value="1000" size="6" placeholder="type port" /> 
 <input type="button" id="btnconnect" value="连接" /> <br>
-    <strong>发送16进制</strong><br>
+    <strong>发送16进制,需要unescape()解码</strong><br>
     <input type="text" id="chat" value="0x63 0x00 0x04 0x00 0x6F 0x63 0x00 0x00 0xD2 0x6B" size="50" placeholder="type and press enter to chat" /> 
     <strong>发送ASCII字符串 </strong>
     <input type="text" id="jsonstr" value="{abc}" size="50" placeholder="type and press enter to json" />

@@ -3,44 +3,88 @@
 require_once('../_module/folder.m.php');
 include "phpqrcode/qrlib.php"; 
 
-function getIP() /*获取客户端IP*/ 
+set_time_limit(0);
 
-{ 
-    if (@$_SERVER["HTTP_X_FORWARDED_FOR"]) 
-    $ip = $_SERVER["HTTP_X_FORWARDED_FOR"]; 
-    else if (@$_SERVER["HTTP_CLIENT_IP"]) 
-    $ip = $_SERVER["HTTP_CLIENT_IP"]; 
-    else if (@$_SERVER["REMOTE_ADDR"]) 
-    $ip = $_SERVER["REMOTE_ADDR"]; 
-    else if (@getenv("HTTP_X_FORWARDED_FOR")) 
-    $ip = getenv("HTTP_X_FORWARDED_FOR"); 
-    else if (@getenv("HTTP_CLIENT_IP")) 
-    $ip = getenv("HTTP_CLIENT_IP"); 
-    else if (@getenv("REMOTE_ADDR")) 
-    $ip = getenv("REMOTE_ADDR"); 
-    else 
-    $ip = "Unknown"; 
-    return $ip; 
-} 
+//获得所有文件
+function  zhShowFileCount($dir) {
+    $handle=opendir($dir);   
+	$i=0;   
+	while($file=readdir($handle)) {   
+	  if (($file!=".")and($file!="..")) {   
+	  $list[$i]=$file;   
+	  $i=$i+1;   
+	  }   
+  }   
+  closedir($handle);  
+  return $i;
+}
+
+//获得所有文件
+function  zhDeleetAllFiles($dir) {
+  $handle=opendir($dir);   
+  $i=0;   
+  while($file=readdir($handle)) {   
+  if (($file!=".")and($file!="..")) {   
+  $list[$i]=$file;   
+  $i=$i+1;   
+  }   
+  }   
+  closedir($handle);  
+  if($list)
+  {
+	foreach($list as $df)
+	{
+	  $delfn="$dir/$df";
+	  unlink($delfn);  
+	}
+  }
+  //重定向浏览器 
+  header("Location: ?");
+}
+
+//删除文件
+$method=$_REQUEST['method'];
+if(0==strcmp($method,'del_all') )
+{
+	zhDeleetAllFiles('./qr_img/');
+}
+
+//
+$data=$_REQUEST['data'];
 
 ?>
+<body>
 <p><a href="../">返回档案</a></p>
-<table width="100%" border="1" cellpadding="5" cellspacing="0">
+<table width="80%" border="1" align="center" cellpadding="5" cellspacing="0">
+<form action="?" method="post">
   <tr>
-    <td><form action="?" method="post">
-      <p>请填入内容
-        <br />
+    <td>
+      <p>请填入内容,内容不允许有逗号,多行即生成多个二维码</p>
+      <p>
         <label>
-          <textarea name="data" cols="50" rows="10" id="data"><?=$data?></textarea>
+          <textarea name="data" cols="50" rows="10" id="data" style="width:100%"><?=$data?></textarea>
         </label>
       </p>
-      <p>
-        <input type="submit" name="button" id="button" value=" 生成二维码 " />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <?='我的IP:'.getIP()?>
-      </p>
-    </form></td>
-    <td width="50%"><?php
+    </td>
+    <td width="25%" align="center"><input type="submit" name="button" id="button" value=" 生成二维码 "  style="width:100px;height:100px"/></td>
+    <td width="25%" align="center"><p>
+      <input type="button" name="button2" id="button2" value="删除缓存文件"  style="width:100px;height:100px" onclick="location.href='?method=del_all'"/>
+    </p>
+      <p>当前文件数量:<span id="imgcount"><?=zhShowFileCount('./qr_img/')?></span></p></td>
+  </tr>
+  </form>
+</table>
+</p>
+
+<table width="80%" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td width="9%">&nbsp;</td>
+    <td width="16%"><strong>名称</strong></td>
+    <td width="15%"><strong>二维码</strong></td>
+    <td width="60%"><strong>备注</strong></td>
+  </tr>
+
+<?php
     
 
 /*
@@ -51,69 +95,40 @@ function getIP() /*获取客户端IP*/
     $margin 图片外围的白色边框像素
 */
 zhPhpMkDir('./qr_img/');
-$data=$_REQUEST['data'];
-$filename='./qr_img/'.getIP().'-'.time().".png";
 if(strcmp($data,''))
-{	
-	$errorCorrectionLevel="L"; 
-	$matrixPointSize="5";
-	$margin="4";
-	QRcode::png($data, $filename, $errorCorrectionLevel, $matrixPointSize, $margin);
-	echo '<img src="'.$filename.'"/>';
-}
-
-/*
-显示旧图片
-*/
-$old_pic=$_REQUEST['old_pic'];
-if(strcmp($old_pic,''))
 {
-echo '<img src="'.$old_pic.'"/>';
-}
-?></td>
-  </tr>
-</table>
-<p><?php
-//获得所有文件
-function  zhDirFiles($dir) {
-	  $handle=opendir($dir);   
-	  $i=0;   
-	  while($file=readdir($handle)) {   
-	  if (($file!=".")and($file!="..")) {   
-	  $list[$i]=$file;   
-	  $i=$i+1;   
-	  }   
-  }   
-  closedir($handle);     
-  return   $list;   
-}
-
-
-//删除文件
-$method=$_REQUEST['method'];
-if(0==strcmp($method,'del') )
-{
-	$fn=$_REQUEST['fn'];
-	unlink('./qr_img/'.$project_id.'/'.$fn);
-}
-
-echo '<div>';
-$ary=zhDirFiles('./qr_img/'.$project_id);
-if($ary)
-{
-	
-	foreach($ary as  $s)
+	$i=0;
+	$ex=str_replace("\n",",",$data);
+	$ex=explode(',',$ex);
+	//var_dump($ex);
+	foreach($ex as $aa)
 	{
-		//$s=iconv("GB2312","UTF-8",$s); 
-		$ln_str=urlencode("qr_img/$s");
-		echo "<a href=\"?old_pic=$ln_str\">$s</a>";
-		echo ' ------------------------------ <a href="?method=del&fn='.urlencode($s).'">删除</a></br>'; 
+		$aa=trim($aa);
+		if($aa!='')
+		{
+			$filename='./qr_img/'.urlencode($aa).".png";
+			$errorCorrectionLevel="L"; 
+			$matrixPointSize="5";
+			$margin="2";
+			QRcode::png($aa, $filename, $errorCorrectionLevel, $matrixPointSize, $margin);
+			//echo $aa;
+	
+?><tr>
+    <td align="center"><strong><?=$i+1?></strong></td>
+    <td><?=$aa?></td>
+    <td><?="<img src=\"$filename\"/>"?></td>
+    <td>&nbsp;</td>
+  </tr>
+<?php
+			$i++;
+  	    }	
 	}
 }
-else
-{
-	echo '找不到任何文件';
-}
-echo '</div>';
 ?>
-</p>
+</table>
+<script language="javascript">
+var imgCount=parseInt(document.getElementById("imgcount").innerHTML);
+imgCount+=<?=$i?>;
+document.getElementById("imgcount").innerHTML=imgCount;
+</script>
+</body>
