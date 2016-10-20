@@ -42,6 +42,7 @@ note:the websocket send/recv 16hex buf must be escape() and unescape() transmiss
     <strong>发送ASCII字符串 </strong>
     <input type="text" id="jsonstr" value="{abc}" size="50" placeholder="type and press enter to json" />
     <p id="status">Not connected</p> 
+    <input type="button" value="清空" id="clean" name="clean"/>
   <ul id="log"></ul> 
 </article> 
 <script>
@@ -80,7 +81,7 @@ function openConnection() {
  
     conn.onmessage = function (event) {
       var message = trCharToHexStr(unescape(event.data));
-      log.innerHTML =log.innerHTML+ '<li class="them">' + message + '</li>';
+      log.innerHTML =log.innerHTML+ '<li class="them">' + event.data+"------->"+message + '</li>';
 	  log.scrollTop=log.scrollHeight;
     };
     
@@ -117,6 +118,10 @@ jsonstr.onkeyup=function(event) {
 	if (event.keyCode==13&&conn.readyState === 1) {
 	  conn.send(jsonstr.value.trim());
 	}
+};
+
+clean.onclick=function(event) {
+	log.innerHTML="";
 };
 
 btnconnect.onclick=function(event) {
