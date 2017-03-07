@@ -280,7 +280,7 @@ void Chzhcn_getIPDlg::OnBnClickedButton1()
 
 				char mmsg[512];
 				sprintf_s(mmsg,"(¡î£ß¡î)¸Éµô³É¹¦...\n\n%s",buf);
-				::MessageBox(0,mmsg,0,0);
+				::MessageBox(0,mmsg,"",0);
 			}
 		}
 	}
