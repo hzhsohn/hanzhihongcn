@@ -1,8 +1,8 @@
 <?php
-require_once("myip/connection.m.php");
+require_once("ip/connection.m.php");
 
 //数据库路径
-$db_path=realpath('myip/myip_db.mdb');
+$db_path=realpath('ip/myip_db.mdb');
 
 $db=new CzhDB();
 $db->open_access($db_path);
