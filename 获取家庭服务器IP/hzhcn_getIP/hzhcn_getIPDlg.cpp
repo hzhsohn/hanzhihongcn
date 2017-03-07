@@ -167,6 +167,7 @@ BEGIN_MESSAGE_MAP(Chzhcn_getIPDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDOK, &Chzhcn_getIPDlg::OnBnClickedOk)
 	ON_BN_CLICKED(IDCANCEL, &Chzhcn_getIPDlg::OnBnClickedCancel)
+	ON_WM_DROPFILES() 
 	ON_BN_CLICKED(IDC_BUTTON1, &Chzhcn_getIPDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
@@ -243,7 +244,7 @@ void Chzhcn_getIPDlg::OnBnClickedCancel()
 }
 
 
-void Chzhcn_getIPDlg::OnBnClickedButton1()
+void Chzhcn_getIPDlg::dodododGIT(char*filename)
 {
 	char newip[128];
 	char url[512];
@@ -255,8 +256,40 @@ void Chzhcn_getIPDlg::OnBnClickedButton1()
 		return ;
 	}
 
-	char buf[512];
-	getCurrentPath(".git/config",buf,sizeof(buf));
+	char buf[512]={0};
+	char *nnsddd=(char *)strrchr(filename,'/');
+	if(nnsddd==NULL)
+		nnsddd=(char *)strrchr(filename,'\\');
+
+	if(nnsddd)
+	{
+		nnsddd++;
+		if(0==strcmp(nnsddd,".git"))
+		{
+			sprintf_s(buf,"%s/config",filename);
+		}
+		else if(0==strcmp(nnsddd,"config"))
+		{
+			strcpy(buf,filename);
+		}
+		else
+		{nnsddd=NULL;}
+	}
+	
+	if(NULL==nnsddd)
+	{
+		if(filename[0]==0)
+		{
+			getCurrentPath(".git/config",buf,sizeof(buf));
+		}
+		else
+		{
+			char mmsg[512];
+			sprintf_s(mmsg,"要拖入.git目录或者config文件!!\n\n%s",filename);
+			::MessageBox(0,mmsg,0,0);
+			return;
+		}
+	}
 
 	if(0==access(buf,0))
 	{
@@ -290,4 +323,32 @@ void Chzhcn_getIPDlg::OnBnClickedButton1()
 		sprintf_s(mmsg,"没有找到文件哟!!\n\n%s",buf);
 		::MessageBox(0,mmsg,0,0);
 	}
+}
+
+
+void Chzhcn_getIPDlg::OnDropFiles(HDROP hDropInfo) 
+{
+//文件拖进来
+UINT count;          
+char filePath[512];            
+count = DragQueryFile(hDropInfo, 0xFFFFFFFF, NULL, 0);          
+if(count)           
+{
+for(UINT i=0; i<count; i++)                    
+{
+	int pathLen = DragQueryFile(hDropInfo, i, filePath, sizeof(filePath));                             
+	//AfxMessageBox(filePath); 
+	char bbbp[512];
+	strcpy(bbbp,filePath);
+	dodododGIT(bbbp);
+}
+}
+DragFinish(hDropInfo); 
+CDialog::OnDropFiles(hDropInfo);
+}
+
+void Chzhcn_getIPDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	dodododGIT("");
 }

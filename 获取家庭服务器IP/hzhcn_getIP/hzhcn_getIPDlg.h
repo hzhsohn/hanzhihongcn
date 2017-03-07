@@ -33,5 +33,8 @@ public:
 	afx_msg void OnBnClickedOk();
 	afx_msg void OnBnClickedCancel();
 	
+	void dodododGIT(char*filename);
+
+	afx_msg void OnDropFiles(HDROP hDropInfo); 
 	afx_msg void OnBnClickedButton1();
 };
