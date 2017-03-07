@@ -277,6 +277,10 @@ void Chzhcn_getIPDlg::OnBnClickedButton1()
 
 				replace_str(url,oip,newip,newUrl);
 				WritePrivateProfileString("remote \"origin\"","url",newUrl,buf);
+
+				char mmsg[512];
+				sprintf_s(mmsg,"(¡î£ß¡î)¸Éµô³É¹¦...\n\n%s",buf);
+				::MessageBox(0,mmsg,0,0);
 			}
 		}
 	}
