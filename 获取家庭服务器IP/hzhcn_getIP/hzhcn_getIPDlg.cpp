@@ -282,6 +282,8 @@ void Chzhcn_getIPDlg::OnBnClickedButton1()
 	}
 	else
 	{
-		::MessageBox(0,buf,"没有找到文件哟!!",0);
+		char mmsg[512];
+		sprintf_s(mmsg,"没有找到文件哟!!\n\n%s",buf);
+		::MessageBox(0,mmsg,0,0);
 	}
 }
