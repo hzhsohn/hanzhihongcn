@@ -19,12 +19,12 @@ if($result)
 	
 	if($rs=$db->read())
 	{
-		echo '{"result":true,"msg":"success","serv":{';
+		echo '{"result":true,"msg":"success",';
 		$title=$rs['title']->value;
 		$ipv=$rs['ipv']->value;
 		$uptime=$rs['uptime']->value;
 		echo "\"title\":\"$title\",\"time\":\"$uptime\",\"ip\":\"$ipv\"";
-		echo '}}';
+		echo '}';
 	}
 	else
 	{
