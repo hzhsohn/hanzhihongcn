@@ -30,7 +30,7 @@ while($rs=$db->read()){
 $db->close();
 
 $db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
-$db->query("select typetwo_id,count(*) as counts from information group by typetwo_id");
+$db->query("select typetwo_id,count(*) as counts from tbnote group by typetwo_id");
 while($rs=$db->read()){
     //echo $rs['typetwo_id']->value.'---'.$rs['counts']->value.'<br/>';
 	$typeGroupID[]=$rs['typetwo_id'];

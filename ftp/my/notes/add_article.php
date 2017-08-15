@@ -34,7 +34,7 @@ if(0==strcmp($method,'add'))
 
 	$db=new PzhMySqlDB();	
 	$db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
-	if($db->query("insert into information(ip,typetwo_id,title,content,uptime) values('$ip',$twotype,'$title','$conent',now())"))
+	if($db->query("insert into tbnote(ip,typetwo_id,title,content,uptime) values('$ip',$twotype,'$title','$conent',now())"))
 	{
 		//$db->query("select @@identity");
 		echo "添加成功...";

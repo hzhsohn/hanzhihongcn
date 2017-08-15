@@ -15,7 +15,7 @@ $method=$_REQUEST['method'];
 if(0==strcmp($method,'update'))
 {
     $url=$_REQUEST['url'];
-	$title=trim($_REQUEST['title']);
+	$title=trim($_REQUEST['title']); 
 	$conent=$_REQUEST['con'];
 	$twotype=$_REQUEST['twotype'];
 	if(0==strcmp($twotype,''))
@@ -39,7 +39,7 @@ if(0==strcmp($method,'update'))
 	$db=new PzhMySqlDB();	
 	$db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
 
-	if($db->query("update information set ip='$ip',typetwo_id=$twotype,title='$title',content='$conent',uptime=now() where autoid=$article_id"))
+	if($db->query("update tbnote set ip='$ip',typetwo_id=$twotype,title='$title',content='$conent',uptime=now() where autoid=$article_id"))
 	{
 		//$db->query("select @@identity");
 		echo '修改成功... <a href="'.$url.'">返回文章</a>';
@@ -56,7 +56,7 @@ if(0==strcmp($method,'update'))
 //读取
 $db=new PzhMySqlDB();	
 $db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
-$db->query('select * from information where autoid='.$article_id,0,0);
+$db->query('select * from tbnote where autoid='.$article_id,0,0);
 if($rs=$db->read())
 {
 	$title=$rs['title'];

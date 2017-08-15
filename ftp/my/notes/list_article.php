@@ -101,7 +101,7 @@ if(0==strcmp($method,'delete'))
 		exit;
 	}
 	
-	$sql='delete from information where autoid='.$autoid;
+	$sql='delete from tbnote where autoid='.$autoid;
 
 	$db=new PzhMySqlDB();	
 	$db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
@@ -180,7 +180,7 @@ else
 $db=new PzhMySqlDB();	
 $db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
 
-$db->query('select *from information where typetwo_id='.$typetwo.' order by time'.$orderby,$showcount,$page);
+$db->query('select *from tbnote where typetwo_id='.$typetwo.' order by time'.$orderby,$showcount,$page);
 //输出表格
 //显示类型
 echo '<span class="text1">';
@@ -218,7 +218,7 @@ echo '</table>';
 
 if($showcount>0)
 {
-	$db->query('select count(*) from information where typetwo_id='.$typetwo,0,0);
+	$db->query('select count(*) from tbnote where typetwo_id='.$typetwo,0,0);
 	$rsct=$db->read();
 	$n=$rsct[0]/$showcount;
 	if($n>1)//小于2页不显示当前第几页这文字

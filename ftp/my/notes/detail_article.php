@@ -57,7 +57,7 @@ body,td,th {
 <?php
     $db=new PzhMySqlDB();	
 	$db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
-	$db->query('select *from information where autoid='.$article_id,0,0);
+	$db->query('select *from tbnote where autoid='.$article_id,0,0);
 	if($rs=$db->read())
 	{
 		//$autoid=$rs['autoid'];

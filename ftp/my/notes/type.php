@@ -79,7 +79,7 @@ if(strcmp($exc,''))
 		$db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
 		$db->query("delete from typetwo where autoid=$p1");
 		//0是未分类
-		$db->query("update information set typetwo_id=0 where typetwo_id=$p1");
+		$db->query("update tbnote set typetwo_id=0 where typetwo_id=$p1");
 		$db->close();
 		break;
 	}
