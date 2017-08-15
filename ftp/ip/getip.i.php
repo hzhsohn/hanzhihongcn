@@ -1,41 +1,28 @@
 <?php
-require_once("connection.m.php");
-require_once("encode.m.php");
-
-//数据库路径
-$db_path=realpath('myip_db.mdb');
-
 $title=$_REQUEST['title'];
 
-ob_clean();
-$db=new CzhDB();
-$db->open_access($db_path);
+$filen="./db.txt";
 
-if(strcasecmp($title,""))
-{$result=$db->query("select*from s_iplist where title='".$title."'");}
-
-if($result)
+$fp=fopen($filen,"r");
+if($fp)
 {
-	
-	if($rs=$db->read())
-	{
-		echo '{"result":true,"msg":"success",';
-		$title=$rs['title']->value;
-		$ipv=$rs['ipv']->value;
-		$uptime=$rs['uptime']->value;
-		echo "\"title\":\"$title\",\"time\":\"$uptime\",\"ip\":\"$ipv\"";
-		echo '}';
-	}
-	else
-	{
-		echo '{"result":false,"msg":"not found title"}';
-	}
-	
+  $json=fread($fp,filesize($filen));
+  $json=json_decode($json);
+  $obj=$json->$title;  
+  if($obj)
+  {
+    echo '{"result":true,"msg":"success",';
+    $ipv=$obj->ipv;
+    $uptime=$obj->uptime;
+    echo "\"title\":\"$title\",\"time\":\"$uptime\",\"ip\":\"$ipv\"";
+    echo '}';
+  }
 }
 else
 {
-	echo '{"result":false,"msg":"data fail"}';
+  echo '{"result":false,"msg":"not found title"}';
 }
-$db->close();
+fclose($fp);
+
 
 ?>

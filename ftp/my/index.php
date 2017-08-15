@@ -89,7 +89,7 @@ body {
 </style></head>
 
 <body>
-<table width="800" border="1" align="center" cellspacing="0" class="table">
+<table width="100%" border="1" align="center" cellspacing="0" class="table">
   <tr>
     <td height="100" valign="top" bgcolor="#336666"><div class="text4">
     <?php
@@ -109,19 +109,7 @@ body {
     </div></td>
   </tr>
   <tr>
-    <td align="center"><div class="lineBtn"><a href="notes" target="_parent" class="text2">我的记事本</a></div></td>
-  </tr>
-  <tr>
-    <td align="center" ><div class="lineBtn"><a href="http://pan.baidu.com" target="_baidu_pan" class="text2">百度网盘</a></div></td>
-  </tr>
-  <tr>
-    <td align="center" ><div class="lineBtn"><a href="gen_guid" target="_parent" class="text2">生成GUID</a></div></td>
-  </tr>
-  <tr>
-    <td align="center" ><div class="lineBtn"><a href="gen_qr" target="_parent" class="text2">生成二维码</a></div></td>
-  </tr>
-  <tr>
-    <td align="center" ><div class="lineBtn"><a href="websocket" target="_parent" class="text2">Websocket数据调试</a></div></td>
+    <td align="center"><div class="lineBtn"><a href="notes" class="text2">我的记事本</a></div></td>
   </tr>
 </table>
 <div class="text3">

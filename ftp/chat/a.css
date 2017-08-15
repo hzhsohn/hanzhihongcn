@@ -4,35 +4,18 @@ body {
 	margin: 0px;
 }
 #divContent {
-	width: 728px;
+	width: 400px;
 	margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#divHeader {
-	font-family: Tahoma, Geneva, sans-serif;
-	background-image: url(../image/index/top_bg.gif);
-	height: 70px;
-}
-
 #divMid {
 	font-family: Tahoma, Geneva, sans-serif;
-	height: 430px;
 	background-color:#F9F9F9;
 	clear: both;
 }
-#divMid #divLeftBar {
-	width: 210px;
-	float: left;
-	font-family: Tahoma, Geneva, sans-serif;
-}
 
-#divMid #divRightBar {
-	float: right;
-	font-family: Tahoma, Geneva, sans-serif;
-	width: 510px;
-}
 #divRightBar h3 {
 	background-color: #69F;
 	padding-left: 22px;
@@ -219,28 +202,18 @@ body {
 	outline: none;
 }
 
-#divContent #divTopAd {
-	background-image: url(../image/index/ad_bg.gif);
-	height: 90px;
-	clear: both;
-}
-
-#divContent #divMid #divLeftBar form {
-	width: 210px;
-	background-color: #F1F3F5;
-}
 #divContent #divMid #log {
 	overflow-y:scroll;
 	overflow-x:auto;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	text-decoration: none;
-	height: 120px;
+	height: 280px;
 	list-style-image: url(../image/index/20070414171453184.gif);
 	padding-left:20px;
 	color:#333;
 }
-#divContent #divMid #divLeftBar #frmChat #nickname {
+#divContent #divMid #frmChat #nickname {
 	float:left;
 	width:40px;
 	height:14px;
@@ -261,7 +234,7 @@ body {
 	background-repeat: no-repeat;
 	padding-left: 16px;
 }
-#divContent #divMid #divLeftBar #frmChat #chat {
+#divContent #divMid #frmChat #chat {
 	float:right;
 	width:122px;
 	height:14px;

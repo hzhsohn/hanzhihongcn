@@ -1,7 +1,4 @@
 ﻿<?php
-require_once("connection.m.php");
-require_once("encode.m.php");
-
 
 function getIP() /*获取客户端IP*/ 
 { 
@@ -29,40 +26,30 @@ if(0==strcmp($title,''))
 	echo '<post result="false" msg="no server title"></post>';
 	exit;
 }
-$title=zhTrSql($title);
-
-//数据库路径
-$db_path=realpath('myip_db.mdb');
 $ipv=getIP();
 
 ob_clean();
-$db=new CzhDB();
-$db->open_access($db_path);
-$db->query("select*from s_iplist where title='$title'");
-if($db->read())
-{
-	$sql="update s_iplist set ipv='$ipv',uptime=now() where title='$title'";
-	if($db->query($sql,0,0))
-	{
-		echo '<post result="true" msg="update success"></post>';
-	}
-	else
-	{
-		echo '<post result="false" msg="database error"></post>';
-	}
-}
-else
-{
-	$sql="insert into s_iplist(ipv,title) values('$ipv','$title')";
-	if($db->query($sql,0,0))
-	{
-		echo '<post result="true" msg="insert success"></post>';
-	}
-	else
-	{
-		echo '<post result="false" msg="database error"></post>';
-	}
-}
-$db->close();
+
+date_default_timezone_set('PRC'); //获取系统时间
+define("_now",date("Y-m-d H:i:s",time()));
+
+
+//------------
+$fp=@fopen("./db.txt","r");
+if($fp)
+{fscanf($fp,"%s",$json);}
+@fclose($fp);
+
+$fp=fopen("./db.txt","w");
+$json=json_decode($json, true);
+//var_dump($json);
+$json["$title"]=array('ipv'=>$ipv,'uptime'=>_now);
+$strJ=json_encode($json);
+//echo $strJ;
+fprintf($fp,"%s",$strJ);
+fclose($fp);
+
+echo '<post result="true" msg="update success"></post>';
+//'<post result="false" msg="database error"></post>';
 
 ?>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>代码笔记</title>
 </head>
- <frameset frameborder="1" cols="18%,*">        
+ <frameset frameborder="1" cols="30%,*">        
 		<frame name="leftframe" id="leftframe" src="leftframe.php"/>     
 		<frame name="rightframe" id="rightframe" src="main.htm"/>   
 </frameset><noframes></noframes>

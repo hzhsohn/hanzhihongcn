@@ -7,11 +7,7 @@ remark:
 
 ***************************************/
 
-//-数据库信息------------------------------
-define('cfg_db_host','127.0.0.1');
-define('cfg_db_username','root');
-define('cfg_db_passwd','');
-define('cfg_db','hanzhihongcn');
+include '../_config.php';
 
 //-smarty模板库的参数------------------------------
 define('smarty_force_compile',false);

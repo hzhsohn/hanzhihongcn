@@ -5,7 +5,6 @@ require_once('../_module/encode.m.php');
 require_once("../_module/session.m.php");
 require_once("ueedit_encode.php");
 
-
 //判断登录的SESSION
 $userinfo=json_decode($_SESSION['ADMIN_INFO']);
 if(is_null($userinfo))

@@ -1,5 +1,5 @@
 ﻿<?php
-$wsadr=$_SERVER['SERVER_NAME'];
+$wsadr=file_get_contents("http://www.hanzhihong.cn/ip/getip2.i.php?title=hzh_home");
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -12,21 +12,18 @@ $wsadr=$_SERVER['SERVER_NAME'];
 <meta name="Category" content="developer,apple,andrpoid,products" />
 <meta name="Description" content="韩智鸿的小博客,本网站只是用来技术交流和生活记事..." />
 <title>在线聊天</title>
-<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="a.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="divContent">
   <div id="divMid">
       <form id="frmChat">
-        <p id="statusBar" class="chat_fail"><span id="status"><img src="image/index/chat_coct.gif"/> 正在连接到聊天室...</span><span style="float:right;" id="connected"></span></p>
+        <p id="statusBar" class="chat_fail"><span id="status"><img src="image/index/chat_coct.gif"/> 正在连接到聊天室...</span><span style="float:right; padding-right:10px" id="connected"></span></p>
         <ul id="log">
         </ul>
         <input type="text" id="nickname" placeholder="呢称"/>
         <input type="text" id="chat" maxlength="256" placeholder="回车发送消息"/>
       </form>
-  </div>
-  <div id="divFooter">
-    <div id="divCopyright"> Design By Han.zh , 粤ICP备13015372号</div>
   </div>
 </div>
 
