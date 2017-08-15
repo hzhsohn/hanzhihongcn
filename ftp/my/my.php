@@ -50,34 +50,22 @@ var searchUrlImg1='url('+searchImg[1].src+')';
 </script>
 
 </head>
-<body onload="MM_preloadImages('image/index/menu1_1.png');MM_preloadImages('image/index/menu2_1.png');MM_preloadImages('image/index/menu3_1.png');">
+<body onload="MM_preloadImages('image/index/menu1_1.png');">
 <div id="divContent">
   <div id="divTitle">
-    <div id="title_Logo"><img  src="image/index/hzh_logo.png" alt="Han.zh Site"/></div>
+    <div id="title_Logo"></div>
     <div id="title_Menu">
       <table border="0" cellpadding="0" cellspacing="0">
         <tr><script>document.getElementById("t"+"e"+"s"+"i").style.display='none';</script>
           <td><a href="index.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Menu_1','','image/index/menu1_1.png',1)"><img src="image/index/menu1_0.png" alt="主页" name="Menu_1" border="0" id="Menu_1" /></a></td>
-          <td><a href="ios.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Menu_2','','image/index/menu2_1.png',1)"><img src="image/index/menu2_0.png" alt="Apple" name="Menu_2" border="0" id="Menu_2" /></a></td>
-          <td><a href="android.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Menu_3','','image/index/menu3_1.png',1)"><img src="image/index/menu3_0.png" alt="Android" name="Menu_3" border="0" id="Menu_3" /></a></td>
           <td><form name="frmSearch" id="frmSearch" method="get" action="" >
                 <input type="text" name="q" id="menuSearch" onfocus="this.style.backgroundColor='#FFF';frmSearch.style.backgroundImage=searchUrlImg0;" onblur="this.style.backgroundColor='#5e5e5e';frmSearch.style.backgroundImage=searchUrlImg1;"/>
-            </form></td>
+          </form></td>
         </tr>
       </table>
     </div>
   </div>
-  <div id="divMid">
-    <div id="divLeftBar"><img src="image/weixin_qr.jpg" width="210" height="210" />
-      <form id="frmChat">
-        <p id="statusBar" class="chat_fail"><span id="status"><img src="image/index/chat_coct.gif"/> 正在连接到聊天室...</span><span style="float:right;" id="connected"></span></p>
-        <ul id="log">
-        </ul>
-        <input type="text" id="nickname" placeholder="呢称"/>
-        <input type="text" id="chat" maxlength="256" placeholder="回车发送消息"/>
-      </form>
-    </div>
-    <div id="divRightBar" > 
+  <div id="divMid" align="center">
       <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="510" height="400">
         <param name="movie" value="music.swf" />
         <param name="quality" value="high" />
@@ -102,15 +90,6 @@ var searchUrlImg1='url('+searchImg[1].src+')';
         </object>
         <!--<![endif]-->
       </object>
-    </div>
-    <div id="divRightBar" >
-     	      <div class="raised"> <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
-            <h4>-.-</h4>
-            <div class="boxcontent">
-                <a href="../my">进入 &gt;&gt; 我的笔记</a>
-            </div>
-            <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b> </div>
-    </div>
   </div>
   <div id="divFooter">
     <div id="divCopyright">Copyright@2012  , Design By Han.zh , 粤ICP备13015372号</div>
