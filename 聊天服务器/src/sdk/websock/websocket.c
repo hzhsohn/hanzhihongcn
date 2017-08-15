@@ -296,7 +296,6 @@ int zhWebSockHandshake(const char* recvbuf,int buflen,TzhWebSocket* hs,char* acc
 		return -1;
 }
 
-
 //释放握手后不再使用的部分变量
 void zhWebSockFree(TzhWebSocket* hs)
 {
