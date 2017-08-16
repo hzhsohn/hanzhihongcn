@@ -48,15 +48,18 @@ void WINAPI WebsockNetRecvDataCallBack(HANDLE handle, int nLen, char* pData);
 //接收客户端的连接请求的回调函数
 void WINAPI WebsockNetAcceptCallBack(HANDLE handle, char *pszIP, WORD wPort)
 {
-	EnterCriticalSection(&g_wssCS);
+	if(strlen(pszIP)>0)
+	{
+		EnterCriticalSection(&g_wssCS);
 
-	WebsockServiceUser tmp;
-	tmp.handle=handle;
-	strcpy_s(tmp.ip,pszIP);
-	tmp.port=wPort;
-	g_websockUserList.insert(make_pair(handle,tmp));
+		WebsockServiceUser tmp;
+		tmp.handle=handle;
+		strcpy_s(tmp.ip,pszIP);
+		tmp.port=wPort;
+		g_websockUserList.insert(make_pair(handle,tmp));
 
-	LeaveCriticalSection(&g_wssCS);
+		LeaveCriticalSection(&g_wssCS);
+	}
 }
 //断开客户端连接的回调函数
 void WINAPI WebsockNetDissconnectCallBack(HANDLE handle)

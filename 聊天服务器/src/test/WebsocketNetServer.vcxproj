@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>TestWebsockServer</ProjectName>
+    <ProjectName>ChatServer</ProjectName>
     <ProjectGuid>{3A1A61F7-0967-4980-BCE9-05274596A154}</ProjectGuid>
     <RootNamespace>TestGCSRTNetServer</RootNamespace>
     <Keyword>Win32Proj</Keyword>
