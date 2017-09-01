@@ -1,0 +1,303 @@
+body {
+	background-image: url(../image/index/body_bg.png);
+	background-repeat: repeat-x;
+	margin: 0px;
+}
+#divContent {
+	width: 728px;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#divHeader {
+	font-family: Tahoma, Geneva, sans-serif;
+	background-image: url(../image/index/top_bg.gif);
+	height: 70px;
+}
+
+#divMid {
+	font-family: Tahoma, Geneva, sans-serif;
+	height: 430px;
+	background-color:#F9F9F9;
+	clear: both;
+}
+#divMid #divLeftBar {
+	width: 210px;
+	float: left;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+#divMid #divRightBar {
+	float: right;
+	font-family: Tahoma, Geneva, sans-serif;
+	width: 510px;
+}
+#divRightBar h3 {
+	background-color: #69F;
+	padding-left: 22px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #000;
+	background-position: 4px 6px;
+	font-weight: normal;
+}
+#divRightBar h3 a{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+}
+#divRightBar h3 a:hover{
+	color: #FC0;
+	text-decoration: none;
+}
+#divRightBar h3 a:active{
+	color: #FF0;
+	text-decoration: none;
+}
+#divRightBar h3 a:visited {
+	text-decoration: none;
+}
+
+#divSider {
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #FFF;
+	height: 20px;
+}
+#divCopyright {
+	text-align: center;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #999;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.raised {
+	font-family: Tahoma, Geneva, sans-serif;
+	padding-bottom: 5px;
+  }
+
+.raised a {
+	text-decoration: none;
+}
+.raised .boxcontent a img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.raised a:hover {
+	color: #E1E1E1;
+	text-decoration: none;
+}
+.raised a:active{
+	color: #FF0;
+	text-decoration: none;
+}
+.raised a:visited {
+	text-decoration: none;
+}
+.raised .b1, .raised .b2, .raised .b3, .raised .b4, .raised .b1b, .raised .b2b, .raised .b3b, .raised .b4b {
+  display:block; 
+  overflow:hidden;
+  font-size:1px;
+  }
+.raised .b1, .raised .b2, .raised .b3, .raised .b1b, .raised .b2b, .raised .b3b {
+  height:1px;
+  }
+.raised .b2 {
+  background:#333; 
+  border-left:1px solid #333; 
+  border-right:1px solid #333;
+  }
+.raised .b3 {
+  background:#69F; 
+  border-left:1px solid #333; 
+  border-right:1px solid #333;
+  }
+.raised .b4 {
+  background:#69F; 
+  border-left:1px solid #333; 
+  border-right:1px solid #333;
+  }
+.raised .b4b {
+  background:#FFF; 
+  border-left:1px solid #333; 
+  border-right:1px solid #333;
+  }
+.raised .b3b {
+  background:#FFF; 
+  border-left:1px solid #333; 
+  border-right:1px solid #333;
+  }
+.raised .b2b {
+	border-left:1px solid #333;
+	border-right:1px solid #333;
+	background-color: #FFF;
+  }
+.raised .b1 {
+  margin:0 5px; 
+  }
+.raised .boxcontent p {
+	font-size: 12px;
+	color: #666;
+	margin: 0px;
+	padding: 0px;
+}
+.raised .b2, .raised .b2b {
+  margin:0 3px; 
+  border-width:0 2px;
+  }
+.raised .b3, .raised .b3b {
+  margin:0 2px;
+  }
+.raised .b4, .raised .b4b {
+  height:2px; margin:0 1px;
+  }
+.raised .b1b {
+  margin:0 5px; background:#333;
+  }
+.raised .boxcontent {
+	display:block;
+	border-left:1px solid #333;
+	border-right:1px solid #333;
+	background-color: #FFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align:left;
+	padding-left: 20px;
+  } 
+.raised h4 {
+	margin: 0px;
+	padding-left: 20px;
+	background-color: #69F;
+	color: #FFF;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #333;
+	border-left-color: #333;
+}
+#divContent #divTitle {
+	margin-bottom: 10px;
+	height: 38px;
+}
+
+#divContent #divTitle #title_Logo {
+	float: left;
+	padding-top: 17px;
+}
+
+#divContent #divTitle #title_Menu {
+	float: right;
+}
+#divContent #divTitle #title_Menu table tr td #frmSearch  {
+	background-image:url(../image/index/menu_search_0.png);
+	width:114px;
+	height:38px;
+	margin: 0px;
+	padding: 0px;
+}
+#divContent #divTitle #title_Menu table tr td #frmSearch #menuSearch {
+	margin-top: 10px;
+	margin-left: 33px;
+	width: 58px;
+	height: 14px;
+	font-family: Tahoma, Geneva, sans-serif;
+	background-color: #5E5E5E;
+	border:none;
+	outline: none;
+}
+
+#divContent #divTopAd {
+	background-image: url(../image/index/ad_bg.gif);
+	height: 90px;
+	clear: both;
+}
+
+#divContent #divMid #divLeftBar form {
+	width: 210px;
+	background-color: #F1F3F5;
+}
+#divContent #divMid #log {
+	overflow-y:scroll;
+	overflow-x:auto;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	height: 120px;
+	list-style-image: url(../image/index/20070414171453184.gif);
+	padding-left:20px;
+	color:#333;
+}
+#divContent #divMid #divLeftBar #frmChat #nickname {
+	float:left;
+	width:40px;
+	height:14px;
+	font-size:12px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-left-color: #FFF;
+	background-image: url(../image/index/input1.gif);
+	background-repeat: no-repeat;
+	padding-left: 16px;
+}
+#divContent #divMid #divLeftBar #frmChat #chat {
+	float:right;
+	width:122px;
+	height:14px;
+	font-size:12px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-left-color: #FFF;
+	background-image: url(../image/index/input1.gif);
+	background-repeat: no-repeat;
+	padding-left: 16px;
+}
+
+.chat_success {
+	font-family: Tahoma, Geneva, sans-serif;
+	text-decoration: none;
+	background-color: #CF0;
+	font-size: 12px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+.chat_fail {
+	font-family: Tahoma, Geneva, sans-serif;
+	text-decoration: none;
+	background-color:#FC6;
+	font-size: 12px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
