@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -43,10 +43,10 @@
         }
         //alert(GetQueryString("menu"));
         if (GetQueryString("menu")==null){
-            document.write( "<scri"+"pt type=text/javascript src=js/menu1.js>"+"</scr"+"ipt>" );
+            document.write( "<scri"+"pt type=text/javascript src=js/menu1.js?"+Math.random()+">"+"</scr"+"ipt>" );
         }
         else{
-            document.write( "<scri"+"pt type=text/javascript src=js/menu"+GetQueryString("menu")+".js>"+"</scr"+"ipt>" );
+            document.write( "<scri"+"pt type=text/javascript src=js/menu"+GetQueryString("menu")+".js"+Math.random()+">"+"</scr"+"ipt>" );
         }
         document.write( "<scri"+"pt type=text/javascript src=js/core.js>"+"</scr"+"ipt>" );
 

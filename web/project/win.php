@@ -31,6 +31,15 @@ $ary[]=array(
 "video"=>"",
 "exe"=>"./win/catchscreen.zip");
 
+$ary[]=array(
+"icon"=>"win/csharp_mp3.png",
+"appname"=>"C#写的MP3播放器",
+"content"=>"好多年前的东西了，写的时候还在读大学，怀念。。。<br/>
+源码在这<br/>
+http://www.pudn.com/Download/item/id/509374.html",
+"video"=>"",
+"exe"=>"./win/csharp_mp3.zip");
+
 
 $smarty->assign("APP",$ary);
 $smarty->display('win.tpl');
