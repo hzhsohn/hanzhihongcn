@@ -40,6 +40,13 @@ http://www.pudn.com/Download/item/id/509374.html",
 "video"=>"",
 "exe"=>"./win/csharp_mp3.zip");
 
+$ary[]=array(
+"icon"=>"win/audiostudio.png",
+"appname"=>"Audio Studio",
+"content"=>"这个项目的主角不是我,但是却给我留下了深深的痛,不过项目还是一个很优秀的作品",
+"video"=>"",
+"exe"=>"./win/AudioStudio.zip");
+
 
 $smarty->assign("APP",$ary);
 $smarty->display('win.tpl');
