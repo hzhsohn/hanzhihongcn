@@ -64,7 +64,7 @@ for($i=1;$i<=$JPEG_COUNT;$i++)
 	$strp="pic/s_$i.jpg";
 	if(realpath($strd) && !realpath($strp))
 	{
-		CreateSmallImage($strd,$strp);
+		CreateSmallImage($strd,$strp,108,94);
 	}
 }
 ?>
@@ -203,7 +203,7 @@ ul, li {
 	background-position: -28px -94px;
 }
 </style>
-<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
 <body marginheight="0" style="background-color:#FFF">
 <div class="imgContainer" style="background-color:#FFF">
   <!--大图-->
