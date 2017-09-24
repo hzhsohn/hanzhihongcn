@@ -1,4 +1,4 @@
-﻿*{margin:0;padding:0;-moz-user-select:none;-khtml-user-select:none;user-select:none}
+*{margin:0;padding:0;-moz-user-select:none;-khtml-user-select:none;user-select:none}
 form,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,p{list-style:none outside none}
 a{text-decoration:none;color:#ccc;outline:none}
 a:hover{text-decoration:underline;color:#1298F4}
@@ -43,11 +43,7 @@ body{font:12px/1.8 Microsoft YaHei,simsong;height:100%;overflow:hidden;backgroun
 #menubar ul{background: url(../images/menu.png) repeat-y -70px 0;padding:5px 0}
 #menubar ul li{width:58px;height:58px;margin:5px 0 5px 12px;}
 #menubar ul li a{display: block;width:58px;height:58px;background: url(../images/news.png) no-repeat center center;}
-#menubar ul li.i a{background: url(../images/i.png) no-repeat center center;}
-#menubar ul li.b a{background: url(../images/b.png) no-repeat center center;}
-#menubar ul li.z a{background: url(../images/z.png) no-repeat center center;}
-#menubar ul li.m a{background: url(../images/m.png) no-repeat center center;}
-#menubar ul li.c a{background: url(../images/c.png) no-repeat center center;}
+#menubar ul li.i a{background: url(../images/lm1.png) no-repeat center center;}
 #menubar ul li:hover,#menubar ul li.selected{background: url(../images/menuicobg.png) no-repeat;}
 .window-container{position:absolute;padding:2px;overflow:hidden;border-radius:3px;background:#656672;box-shadow:0 1px 5px rgba(0, 0, 0, 0.4)}
 .window-current{background:#363740;box-shadow:0 1px 10px rgba(0, 0, 0, 0.6)}
