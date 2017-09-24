@@ -41,16 +41,8 @@
             var r=window.location.search.substr(1).match(reg);
             if(r!=null) return unescape(r[2]);return null;
         }
-        //alert(GetQueryString("menu"));
-        if (GetQueryString("menu")==null){
-            document.write( "<scri"+"pt type=text/javascript src=js/menu1.js?"+Math.random()+">"+"</scr"+"ipt>" );
-        }
-        else{
-            document.write( "<scri"+"pt type=text/javascript src=js/menu"+GetQueryString("menu")+".js"+Math.random()+">"+"</scr"+"ipt>" );
-        }
+        document.write( "<scri"+"pt type=text/javascript src=js/menu1.js?"+Math.random()+">"+"</scr"+"ipt>" );
         document.write( "<scri"+"pt type=text/javascript src=js/core.js>"+"</scr"+"ipt>" );
-
-
 
     </script>
     <script type="text/javascript" src="js/templates.js"></script>
