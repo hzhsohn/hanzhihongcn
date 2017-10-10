@@ -65,7 +65,7 @@ body,td,th {
 		$content=$rs['content'];
 		$uptime=$rs['uptime'];
 ?>
-<table width="100%" border="1" align="center" cellpadding="5" cellspacing="0" style="background-color:#FFF">
+<table border="1" align="center" cellpadding="5" cellspacing="0" style="background-color:#FFF; width:100%;">
   <tr>
     <td height="22" valign="bottom" bgcolor="#666666"><div class="text1"><?=$title?>&nbsp;</div></td>
   </tr>
@@ -75,7 +75,7 @@ body,td,th {
     </td>
   </tr>
   <tr>
-    <td height="520" valign="top"><?=ueTrHtml($content)?></td>
+    <td valign="top"><div><?=ueTrHtml($content)?></div></td>
   </tr>
 </table>
 <?php
