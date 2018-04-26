@@ -8,5 +8,6 @@ var shortcut = [
 [5,"Android程序","images/i/android.png","http://www.hanzhihong.cn/project/android.php",800,600],
 [6,"Windows程序","images/i/win.png","http://www.hanzhihong.cn/project/win.php",800,600],
 [7,"陈年旧证","images/i/cert.png","http://www.hanzhihong.cn/zhenshu/index.php",800,730],
-[8,"我的简历","CV/cv.png","http://www.hanzhihong.cn/CV",800,600]
+[8,"我的简历","CV/cv.png","http://www.hanzhihong.cn/CV",800,600],
+[9,"我的支付宝","alipay/icon.png","http://www.hanzhihong.cn/alipay",600,620]
 ];
