@@ -9,7 +9,7 @@ echo 'no parameter = pcm';
 exit;
 }
 
-echo $tokenUrl="http://www.hx-kong.com/aiyy/token.php";
+echo $tokenUrl="http://www.hanzhihong.cn/aiyy/token.php";
 echo "<br/>";
 $j = file_get_contents($tokenUrl);
 $j = json_decode(trim($j,chr(239).chr(187).chr(191)),true);
