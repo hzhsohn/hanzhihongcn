@@ -1,0 +1,56 @@
+/***************************************************************************
+名  称: PHP模块
+作  者: Han Zhihong
+E-MAIL: mail@hanzhihong.cn
+
+用    法:	
+		require_once("zhlib.php"); //在这文件里加载自己要用到的模块
+		require_once("access.m.php");
+		$db=new CzhAccessDB();		
+		//$db=new CzhMySqlDB();
+		$db->open_access(realpath('db1.mdb'));
+		//$db->open_mysql("127.0.0.1","db","root","");
+		//插入
+		$A=zhIncode(rand());		
+		$db->query("insert into abc(txt) values('$A')");
+		//删除
+		//$db->query("delete from abc where txt='$A'");
+		//浏览  SQL,记录数,页数0开始
+		$db->query("select *from abc",0,0);
+		while($RS=$db->read())
+		{
+			echo zhTrcode($RS["txt"])."<BR>";
+			$db->record_next();
+		}
+		//记录数目
+		echo 'count='.$db->record_count();
+		$db->close();
+
+
+常用函数:
+		zhPhpRedirect($URL,$TARGET="parent");	//跳转页面,所有浏览器均支持	return null
+		zhPhpSubstrGb2312($str, $start, $len);   	//中文字符截取	return str
+		zhPhpTrHtml($STR)				//页面显示用转义 return str
+		zhPhpTrSql($STR);				//入数据库用进行转义 return str
+		zhPhpMkDir($directoryName);			//生成路径是否存在 	return bool
+		zhPhpDeleteDir($dir)			//删除路径	return bool
+		zhPhpGetFiles($dir)			//获得文件夹的所有文件	return array
+		zhPhpCheckDay($str_date,$day)		//检查日期是否过期 return bool
+		zhPhpStringImage($string,$width,$height)	//生成文字图片 return null
+   		zhPhpCreatePage//生成模板功能,,生成新页面功能
+		zhPhpGetTag($str,$start,$end,$num=1) 	//获取指定标记中的内容 return str
+		zhPhpGetAllUrl($conent)			//取得所有链接 return array
+
+		PzhAes::encrypt($txt,$key) 			//加密		return str
+		PzhAes::decrypt($txt,$key) 			//解密		return str
+
+		zhPhpSessionSet($name,$value)			//创建SESSION	
+		zhPhpSessionGet($name)			//注销当前用户的所有SESSION,并且结束session会话
+		zhPhpSessionExist($name)   判断是否SESSION存在
+		zhPhpSessionRemove($name) //注销一个对象
+		
+		zhPhpChecksumCreate() //验证码图片生成
+		zhPhpChecksumResult()  //检验验证码,返回bool
+
+		PzhUploadImg 是上传图片的类,上传后可压缩
+		PzhMail 类是邮件功能
