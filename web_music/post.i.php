@@ -5,6 +5,8 @@ require_once("module/session.m.php");
 require_once("module/mysql.m.php");
 require_once("_config.php");
 
+header("content-type:text/html;charset=utf-8");
+
 //获取客户端IP
 function getIP()  
 { 
@@ -59,9 +61,8 @@ $_scanKey=$url['query'];
 //删除必备参数,然后存到数据库
 unset($json['_scan']);
 unset($json['_act']);
-$strJ=json_encode($json);
-//var_dump($strJ);
-
+//$strJ=$parameter;
+$strJ=json_encode($json, JSON_UNESCAPED_UNICODE); //必须PHP5.4+
 //------------------------------------
 if('update'==$_act)
 {
