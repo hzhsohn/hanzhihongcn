@@ -1,2 +1,0 @@
-echo "passwd: hxkong123abc"
-mysqldump -u root -p hanzhihongcn>hanzhihongcn.sql
