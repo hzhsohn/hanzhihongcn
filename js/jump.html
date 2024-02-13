@@ -1,0 +1,9 @@
+<script type="text/javascript">
+var url = location.search;
+var str="";
+if (url.indexOf("?") != -1) {
+  str = url.substr(1); 
+  top.location.href=str;
+}
+document.write("<a href='"+str+"' target=_parent>跳转连接"+str+"</a>");
+</script>
