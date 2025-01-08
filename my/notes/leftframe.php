@@ -7,18 +7,18 @@ require_once("../_module/session.m.php");
 
 //判断登录的SESSION
 $userinfo=json_decode($_SESSION['ADMIN_INFO']);
-
 //数据库路径
 $db_path=realpath($db_filename);
 
-
-$db=new PzhMySqlDB();	
+$db=new PzhMySqlDB();
 $db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
+
 $db->query("select * from typeone");
 while($rs=$db->read()){
 		$typeoneID[]=$rs['autoid'];
 		$typeoneText[]=$rs['type_text'];
 }
+
 
 $db->open_mysql(cfg_db_host,cfg_db,cfg_db_username,cfg_db_passwd);
 $db->query("select * from typetwo");

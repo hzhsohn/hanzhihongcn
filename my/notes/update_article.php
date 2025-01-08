@@ -28,10 +28,7 @@ if(0==strcmp($method,'update'))
    }
 
 	$conent=ueTrSql($conent);//将字符串进行处理
-	if(get_magic_quotes_gpc())//如果get_magic_quotes_gpc()是打开的
-  {
-    $conent=stripslashes($conent);//将字符串进行处理
-  }
+	
 
 	$title=zhPhpTrSql($title);
 	$ip=$_SERVER['REMOTE_ADDR'];

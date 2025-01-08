@@ -1,31 +1,29 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-08-15 21:35:24
+<?php /* Smarty version Smarty-3.1.16, created on 2024-02-24 14:32:58
          compiled from "./templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20473200895992f89c3a9797-04944616%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:140900164065d98d9abbd054-84228490%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1401640195,
+      1 => 1588668011,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20473200895992f89c3a9797-04944616',
+  'nocache_hash' => '140900164065d98d9abbd054-84228490',
   'function' => 
   array (
   ),
   'variables' => 
   array (
     'err' => 0,
-    'hzhcn_username' => 0,
-    'reback' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.16',
-  'unifunc' => 'content_5992f89c3e8768_68382641',
+  'unifunc' => 'content_65d98d9abc1cf3_12767886',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5992f89c3e8768_68382641')) {function content_5992f89c3e8768_68382641($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config("admin.conf", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars("setup", 'local'); ?>
+<?php if ($_valid && !is_callable('content_65d98d9abc1cf3_12767886')) {function content_65d98d9abc1cf3_12767886($_smarty_tpl) {?>{config_load file="admin.conf" section="setup"}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style type="text/css">
@@ -86,8 +84,7 @@ body,td,th {
               <table  height="225" border="0" align="center" cellpadding="2" cellspacing="0" bgcolor="#F0F0F0">
   <tr>
     <td width="430" height="70" align="center" bgcolor="#3399FF"><span class="STYLE3"><span class="STYLE7">
-      <?php echo $_smarty_tpl->getConfigVariable('title');?>
-
+      {#title#}
       </span></span></td>
     </tr>
   <tr>
@@ -109,8 +106,7 @@ body,td,th {
         </tr>
         <tr>
           <td width="35%" align="right"><strong>账　号:</strong></td>
-            <td width="65%" colspan="2"><input name="username" type="text" id="username" value="<?php echo $_smarty_tpl->tpl_vars['hzhcn_username']->value;?>
-" size="15" maxlength="18"></td>
+            <td width="65%" colspan="2"><input name="username" type="text" id="username" value="{$hzhcn_username}" size="15" maxlength="18"></td>
             </tr>
         <tr>
           <td align="right"><strong>密　码:</strong></td>
@@ -121,16 +117,14 @@ body,td,th {
         </tr>
         <tr>
           <td height="37" colspan="3" align="center" class="up"><input type="submit" name="Submit" value="   登陆   " />
-            <input type="hidden" name="method" value="login"> <input type="hidden" name="reback" value="<?php echo $_smarty_tpl->tpl_vars['reback']->value;?>
-"></td>
+            <input type="hidden" name="method" value="login"> <input type="hidden" name="reback" value="{$reback}"></td>
         </tr>
         </table>
           </form>
       </td>
     </tr>
   <tr>
-    <td align="center" bgcolor="#858585"><span class="STYLE10"> <?php echo $_smarty_tpl->getConfigVariable('copyright');?>
-</span></td>
+    <td align="center" bgcolor="#858585"><span class="STYLE10"> {#copyright#}</span></td>
     </tr>
   </table>
               <br>

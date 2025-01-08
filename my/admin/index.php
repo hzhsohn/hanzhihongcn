@@ -1,5 +1,4 @@
 <?php
-require_once("../_module/Smarty-3.1.16/libs/Smarty.class.php");
 require_once('../_module/mysql.m.php');
 require_once('../_module/encode.m.php');
 require_once('../_module/session.m.php');
