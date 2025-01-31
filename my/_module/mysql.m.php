@@ -44,7 +44,7 @@ class PzhMySqlDB
 	function read()
 	{
 		if($this->RECORDSET)
-		return mysqli_fetch_array($this->RECORDSET);
+		{return mysqli_fetch_array($this->RECORDSET);}
 		return false;
 	}
 	
@@ -61,6 +61,32 @@ class PzhMySqlDB
 		}
 		return $this->RECORDSET=mysqli_query($this->DNS,$string);
 	}
+    	
+	function multi_query($string)
+	{
+		$b=mysqli_multi_query($this->DNS,$string);
+		if(false==$b)
+		{return null;}
+		
+		$ary=array();
+		do{
+        //取出第一个结果集
+        $this->RECORDSET=mysqli_store_result($this->DNS);
+        if($this->RECORDSET)
+        {
+          if($row=mysqli_fetch_array($this->RECORDSET)){
+              $ary[]=$row;
+          }
+          //及时释放内存
+          $this->RECORDSET->free();
+        }
+        if(!mysqli_more_results($this->DNS))
+        {
+          break;
+        }
+    }while(mysqli_next_result($this->DNS)); 
+    return $ary;
+	}
 	
 	function record_move($n)
 	{
@@ -72,9 +98,9 @@ class PzhMySqlDB
 	
 	function close()
 	{
-		if($this->RECORDSET)
+		if(is_object($this->RECORDSET))
 		{
-			@mysqli_free_result($this->RECORDSET);
+			mysqli_free_result($this->RECORDSET);
 		}
 		mysqli_close($this->DNS);
 	}
